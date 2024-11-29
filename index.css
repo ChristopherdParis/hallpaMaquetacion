@@ -1,0 +1,134 @@
+/*iconos globales*/
+.icon-phone {
+    height: 35px;
+    width: 35px;
+ }
+ .icon-menu {
+    height: 25px;
+    width: 25px;
+}
+.whatsapp-icon{
+    height: 35px;
+    width: 35px;
+}
+
+/*borders globales*/
+.x1 {
+    border: 2px solid red;
+}
+.x2 {
+    border: 2px solid blue;
+}
+.x3 {
+    border: 2px solid green;
+}
+.x4 {
+    border: 2px solid gold;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*cachete*/
+.banner {
+    background-color: black;
+    padding: 20px 0px;
+    border-bottom: 1px solid red;
+}
+
+.logo-hallpa {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.logo-hallpa img{
+    height: 35px;
+}
+
+.encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 20px;
+}
+
+.menu-hallpa{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid red ;
+}
+
+.menu .text {
+    padding: 0px 10px;
+}
+
+.contactanos, .navegacion {
+    display: none;
+}
+
+
+.redireccion{ 
+    border-right: 2px solid rgb(223, 23, 23) ;
+    display: flex;
+    align-items: end;
+    padding: 0px 20px;
+    height: 20px;
+}
+/* MEdia querie general para pantallas de medianas a grandes*/
+@media screen and (min-width: 601px) and (max-width: 4000px) {
+    .navegacion, .contactanos {
+        display: flex;
+    }
+
+    .menu-hallpa {
+        display: none;
+    }
+
+    .navegacion {
+        color: white;
+        align-items: center;
+    }
+
+    .contactanos {
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
+    .contactanos .texto {
+        display: block;
+        align-items: center;
+        padding: 0px 5px;
+        text-align: center;
+    }
+}
+  
+  /* Media query para pantallas medianas */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    body {
+      background-color: lightgreen;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 4000px) {
+    
+    body {
+      background-color: lightsalmon;
+    }
+}
+
+
+
+  

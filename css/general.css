@@ -1,0 +1,338 @@
+/*borders globales*/
+.x1 {
+    border: 2px solid red;
+}
+.x2 {
+    border: 2px solid blue;
+}
+.x3 {
+    border: 2px solid green;
+}
+.x4 {
+    border: 2px solid gold;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-color: black;
+    padding: 10px 0px;
+    border-bottom: 1px solid red;
+}
+
+.logo-hallpa{
+    height: 35px;
+}
+
+.logo {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-hallpa{
+    color: white;
+}
+
+.contactanos {
+    color: white;
+    display: none;
+    align-items: center;
+}
+.contactanos .texto {
+    display: block;
+    align-items: center;
+    padding: 0px 5px;
+    text-align: center;
+}
+
+.navegacion {
+    color: white;
+    display: none;
+    align-items: center;
+}
+
+.redireccion{ 
+    border-right: 2px solid rgb(223, 23, 23) ;
+    display: flex;
+    align-items: end;
+    padding: 0px 20px;
+    height: 20px;
+}
+
+.whatsapp-icon{
+    height: 35px;
+    width: 35px;
+}
+/*cuerpo*/
+.cuerpo {
+    background-color: white;
+}
+.c-banner {
+    background-color: rgb(41, 34, 34);
+    color: rgb(209, 199, 199);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.servicios {
+    height: 50px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.tabs {
+    margin: 0px 100px;
+    display: flex;
+}
+.tab {
+    padding: 10px 20px;
+    margin: 0px 10px;
+    color: red;
+    border: 1px solid red;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.info-servicio {
+    background-color: red;
+}
+
+/* Estilo para el contenedor de la portada */
+.portada {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: zoom 6s infinite;
+}
+
+/* Estilo para el texto encima de la imagen */
+.texto-overlay {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    color: white;
+}
+.line {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+
+/* Estilo para el título */
+.texto-overlay h1 {
+    font-size: 3em;         /* Tamaño grande para el título */
+    margin-bottom: 10px;    /* Espaciado debajo del título */
+    font-weight: bold;      /* Resalta el título */
+}
+
+/* Estilo para la descripción */
+.texto-overlay p {
+    font-size: 1.2em;       /* Tamaño más pequeño para la descripción */
+    line-height: 1.5;       /* Espaciado entre líneas */
+}
+
+/* Estilo para la capa con características */
+.texto-overlay2 {
+    background: rgba(0, 0, 0, 0.7);  /* Fondo oscuro transparente */
+    position: absolute;
+    bottom: 0;  /* Coloca la capa al final del contenedor */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;  /* Distribuye las características equitativamente */
+    align-items: center;  /* Asegura que los elementos estén alineados verticalmente */
+    z-index: 1;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);  /* Estado inicial de la imagen (sin zoom) */
+    }
+    50% {
+        transform: scale(1.1);  /* Zoom hacia adentro (más grande) */
+    }
+    100% {
+        transform: scale(1);  /* Regresa al tamaño original */
+    }
+}
+
+/* Características individuales */
+.caracteristicas {
+    display: flex;
+    flex-direction: column;  /* Apilar imagen y texto verticalmente */
+    align-items: center;  /* Centra imagen y texto horizontalmente */
+    margin: 10px;
+    text-align: center;
+    width: 18%;  /* Ajusta el ancho de las características para que quepan 5 en una fila */
+}
+
+.c-img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;  /* Espacio entre la imagen y el texto */
+}
+
+.c-img img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.descripcion p {
+    font-size: 1rem;  /* Tamaño adecuado para la descripción */
+    margin: 0;
+    padding: 0;
+}
+
+/*beneficios*/
+.beneficios {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+}
+.beneficios .descripcion {
+    width: 50%;
+    text-align: center;
+    
+}
+.beneficios img{
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(
+        to left,  /* Dirección del gradiente: de derecha a izquierda */
+        white 60%,  /* Blanco hasta el 80% */
+        transparent  /* Transparentemente después del 80% */
+    );
+}
+
+.nopuedeser img{
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(
+        to right,  /* Dirección del gradiente: de izquierda a derecha */
+        white 60%,  /* Blanco hasta el 80% de la imagen */
+        transparent  /* Transparentemente después del 80% */
+    );
+}
+
+
+
+.imagen-flotante {
+    position: fixed;
+    bottom: 20px; /* A 20px del fondo */
+    right: 20px;  /* A 20px de la derecha */
+    z-index: 1000; /* Asegura que la imagen esté sobre otros elementos */
+    transition: bottom 0.3s; /* Suaviza el movimiento */
+}
+
+.imagen-flotante img {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto;
+    animation: zoom 6s infinite;
+}
+
+body{
+    background-color: blue;
+  }
+
+
+.icon-phone {
+   height: 35px;
+   width: 35px;
+}
+.icon-menu {
+   height: 25px;
+   width: 25px;
+}
+
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    
+    .encabezado {
+        justify-content: space-around;
+    }
+    .menu-hallpa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu {
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        border-right: 2px solid red ;
+    }
+    .menu .text {
+        padding: 0px 10px;
+    }
+    
+
+    body {
+      font-size: 14px;
+      background-color: lightcoral;
+    }
+}
+  
+  /* Media query para pantallas medianas */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .navegacion, .contactanos {
+        display: flex;
+    }
+    .menu-hallpa {
+        display: none;
+    }
+    .encabezado {
+        padding: 0px 20px;
+    }
+
+    body {
+      background-color: lightgreen;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 4000px) {
+    .navegacion, .contactanos {
+        display: flex;
+    }
+    .menu-hallpa {
+        display: none;
+    }
+    .encabezado {
+        padding: 0px 20px;
+    }
+
+    body {
+      background-color: lightsalmon;
+    }
+}
+
+
+
+  
