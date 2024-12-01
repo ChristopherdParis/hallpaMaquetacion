@@ -31,7 +31,7 @@
     margin: 0;
     padding: 0;
 }
-/*cachete*/
+/*NAVBAR*/
 .banner {
     background-color: black;
     padding: 20px 0px;
@@ -85,6 +85,45 @@
     padding: 0px 20px;
     height: 20px;
 }
+
+
+.c-banner {
+    background-color: rgb(43, 41, 41);
+    color: white;
+    text-align: center;
+    padding: 10px 70px;
+}
+.servicios {
+    padding-top: 10px;
+}
+
+.tabs {
+    display: flex;
+    margin: 0px 30px;
+}
+
+.tab {
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0px 3px;
+    color: red;
+    border: 1px solid red;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.portada {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 /* MEdia querie general para pantallas de medianas a grandes*/
 @media screen and (min-width: 601px) and (max-width: 4000px) {
     .navegacion, .contactanos {
@@ -128,7 +167,3 @@
       background-color: lightsalmon;
     }
 }
-
-
-
-  
