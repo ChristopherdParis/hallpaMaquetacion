@@ -1,4 +1,42 @@
-/*iconos globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;/* 1REM = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+}
+/*
+|--------------------------------------------------------------------------
+|                   GLOBALES
+|--------------------------------------------------------------------------
+ */
+._contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+|                   UTILIDADES
+|--------------------------------------------------------------------------
+ */
+ /*iconos globales*/
 .icon-phone {
     height: 35px;
     width: 35px;
@@ -12,8 +50,8 @@
     width: 35px;
 }
 
-/*borders globales*/
-.x1 {
+
+ .x1 {
     border: 2px solid red;
 }
 .x2 {
@@ -26,12 +64,12 @@
     border: 2px solid gold;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-/*NAVBAR*/
+ /*
+|--------------------------------------------------------------------------
+|                   HEADER  Y NAVEGACION
+|--------------------------------------------------------------------------
+ */
+
 .banner {
     background-color: black;
     padding: 20px 0px;
@@ -91,41 +129,150 @@
     background-color: rgb(43, 41, 41);
     color: white;
     text-align: center;
-    padding: 10px 70px;
+    padding: .2rem 7rem;
+    font-size: 1.2rem;
 }
+
+/**TABS SERVICIOS*/
 .servicios {
-    padding-top: 10px;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid white;
 }
 
 .tabs {
-    display: flex;
-    margin: 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
 }
 
 .tab {
-    height: 50px;
-    padding: 10px 20px;
-    margin: 0px 3px;
+    text-align: center;
+    padding: 0 .5rem;
     color: red;
     border: 1px solid red;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.portada {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
+
+/*IMAGEN SERVICIOS*/
+.servicios-imagen{
+    background-image: linear-gradient(
+        to bottom, transparent 10%, #000 100%
+    ), url(imgs/PLATINUM\ CONFORT\ 1ER\ PISO/IMG_5442.JPG);
+    background-position: center center;
+    padding-top: 10rem;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
 }
-.portada img {
+.servicios-imagen-grid .texto-servicio, .listado-items {
+    padding: 0rem 2.5rem;
+}
+.servicios-imagen-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.contenido-servicio{
+    flex-basis: 50%;
+    padding-top: 20rem;
+}
+
+.texto-servicio {
+    color: #fff;
+}
+.texto-servicio h2{
+    font-size: 3rem;
+    padding-left: 1.5rem;
+}
+.texto-servicio p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+.texto-servicio span {
+    color: rgb(165, 4, 4);
+}
+
+.informacion-servicio {
+    border-top: 1px solid #fff;
+    padding-bottom: 3rem;
+}
+
+.listado-items {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listado-items img{
+    border-radius: 1rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.listado-items p {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/*MAS INFORMACION ACERCA**/
+.informacion-card {
+    border-bottom: 1px solid #e1e1e1;
+    margin: 2rem 0;
+}
+.informacion-card img{
+    background-repeat: no-repeat;
+    height: 15rem;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    object-position: center;
 }
+.texto-informacion {
+    padding: 0 3rem;
+}
+.texto-informacion p {
+    text-align: justify;
+    font-size: 1.3rem;
+}
+.texto-informacion h3 {
+    font-size: 1.3rem;
+}
+
+.beneficios-tablet{
+    display: none;
+}
+
 /* MEdia querie general para pantallas de medianas a grandes*/
 @media screen and (min-width: 601px) and (max-width: 4000px) {
+    .beneficios-tablet{
+        display: block;
+    }
+    
+    .servicios{
+        margin-left: 9rem;
+        margin-right: 9rem;
+    }
+    .tabs {
+        gap: 2rem;
+    }
+    .tabs .tab{
+        padding: 1rem 0;
+    }
+    .servicios-imagen-grid .texto-servicio, .listado-items {
+        padding: 0rem 10rem;
+    }
+    .listado-items {
+        padding-top: 2rem;
+        gap: 2rem;
+    }
     .navegacion, .contactanos {
         display: flex;
     }
@@ -151,19 +298,177 @@
         padding: 0px 5px;
         text-align: center;
     }
+    .informacion-section-servicios {
+        display: none;
+    }
 }
   
   /* Media query para pantallas medianas */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
 
-    body {
-      background-color: lightgreen;
+    .beneficio-card-title {
+        border-top: .1rem solid red;
+        text-align: center;
+        font-weight: 100;
+    }
+    .beneficio-card-title span:nth-child(1){
+        color: red;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .beneficio-card-title span:nth-child(2){
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .beneficio-card {
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .beneficio-card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img-servicio-left {
+        position: relative;
+    }
+
+    .img-servicio-left:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, transparent 10%, white 100%);
+        z-index: 1;
+    }
+
+    .img-servicio-rigth {
+        position: relative;
+    }
+
+    .img-servicio-rigth:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent 10%, white 100%);
+        z-index: 1;
+    }
+    .texto-beneficio {
+        text-align: center;
+        padding: 1rem 5rem;
+    }
+    .texto-beneficio h3 {
+        font-size: 1.5rem;
+    }
+    .texto-beneficio p {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 4000px) {
+    .c-banner {
+        padding: .5rem 0;
+        font-size: 1.5rem;
+    }
+    .listado-items img{
+        border-radius: 1rem;
+        width: 7rem;
+        height: 7rem;
+    }
     
-    body {
-      background-color: lightsalmon;
+    .listado-items p {
+        font-size: 1.5rem;
+    }
+
+    .servicios{
+        margin-left: 40rem;
+        margin-right: 40rem;
+    }
+    .listado-items {
+        padding-top: 3rem;
+    }
+    
+    .servicios-imagen{
+        object-fit: cover;
+        background-size: 100%;
+        padding-top: 25rem;
+    }
+
+    .servicios-imagen-grid .texto-servicio, .listado-items {
+        margin: 0 20rem;
+    }
+    
+    .beneficio-card-title {
+        border-top: .2rem solid red;
+        text-align: center;
+        font-weight: 100;
+    }
+    .beneficio-card-title span:nth-child(1){
+        color: red;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .beneficio-card-title span:nth-child(2){
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .beneficio-card {
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .beneficio-card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img-servicio-left {
+        position: relative;
+    }
+
+    .img-servicio-left:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, transparent 10%, white 100%);
+        z-index: 1;
+    }
+
+    .img-servicio-rigth {
+        position: relative;
+    }
+
+    .img-servicio-rigth:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent 10%, white 100%);
+        z-index: 1;
+    }
+    .texto-beneficio {
+        text-align: center;
+        padding: 1rem 15rem;
+    }
+    .texto-beneficio h3 {
+        font-size: 2.5rem;
+    }
+    .texto-beneficio p {
+        font-size: 2rem;
+        line-height: 1.5;
     }
 }
