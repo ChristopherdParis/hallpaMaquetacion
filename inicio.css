@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;/* 1REM = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+}
+/*
+|--------------------------------------------------------------------------
+|                   GLOBALES
+|--------------------------------------------------------------------------
+ */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+|                   UTILIDADES
+|--------------------------------------------------------------------------
+ */
+
+
+ .x1 {
+    border: 2px solid red;
+}
+.x2 {
+    border: 2px solid blue;
+}
+.x3 {
+    border: 2px solid green;
+}
+.x4 {
+    border: 2px solid gold;
+}
+
+ /*
+|--------------------------------------------------------------------------
+|                   HEADER  Y NAVEGACION
+|--------------------------------------------------------------------------
+ */
+ .header.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* HEADER**/
+
+.header {
+    min-height: 45rem;
+    background-image: url(imgs/EXTERIOR/IMG_5525.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 5rem;
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.barra {
+    background-color: #000000b4;
+}
+
+.logo {
+    width: 10rem;
+    margin: 1.5rem;
+}
+.slogan {
+    color: white;
+    margin: 0 1rem;
+}
+.slogan h1 {
+    font-size: 4rem;
+}
+.slogan span {
+    color: #f51010;
+    font-size: 4rem;
+}
+.slogan p {
+    margin-top: rem;
+    text-align: left;
+}
